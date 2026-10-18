@@ -7,6 +7,7 @@ A responsive homepage redesign for Focus University Admission Coaching, using th
 - Focus identity cues represented with an inline SVG emblem and Bengali wordmark treatment.
 - Premium dark mode by default, with a user-controlled light theme toggle.
 - Responsive sticky navigation, mobile menu, desktop/mobile course search, and category filters.
+- Separate public-homepage and online-portal entry flow: `/` is the public marketing site; `/online/` forwards students to Focus's existing secure login; the existing Focus backend continues to handle authentication and the post-login student portal.
 - Course cards with Focus course thumbnails and live public links for Science, Humanities, Business Studies, exam batches, second-time batches, and the free course.
 - Student achievement cards based on stories visible on the current Focus homepage.
 - Student services section for online/offline programs, Q&A, free course, materials, absent/result support, and branch discovery.
@@ -28,6 +29,6 @@ A workflow at `.github/workflows/deploy.yml` attempts to publish the static webs
 ## Important implementation notes
 
 - This is a front-end prototype; it links to Focus's existing public course pages, student login, teacher login, branches, contact, and success stories.
-- Login, enrollment/payment, student results, Q&A, SMS, and administration remain powered by Focus's existing systems. This static page does not implement or replace those backends.
+- Login, enrollment/payment, student results, Q&A, SMS, and administration remain powered by Focus's existing systems. The `online/` entry page forwards to the existing login and does not collect credentials or simulate authentication. This static site does not implement or replace those backends.
 - Course prices, class counts, and success-story details should be rechecked by Focus before production launch because program information can change by session.
 - The inline vector is a brand-inspired recreation based on the provided screenshot, not the original high-resolution source logo. Replace it with the official transparent logo asset if Focus provides one.
