@@ -19,10 +19,11 @@ Open `index.html` directly, or use a local static server. No build step is requi
 
 ## Publish on GitHub Pages
 
-1. Open **Settings → Pages** in this repository.
-2. Select **Deploy from a branch**.
-3. Choose `main` and `/(root)`, then save.
-4. Wait for the Pages deployment to finish.
+A workflow at `.github/workflows/deploy.yml` attempts to publish the static website automatically whenever `main` is updated and can also be run manually from **Actions**.
+
+1. Open **Settings → Pages** and make sure the deployment source is **GitHub Actions**.
+2. Open **Actions → Deploy Focus website to GitHub Pages**.
+3. Check the latest run. When it succeeds, open the published Pages URL from the workflow run or repository Settings → Pages.
 
 ## Important implementation notes
 
