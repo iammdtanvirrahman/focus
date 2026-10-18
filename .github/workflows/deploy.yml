@@ -30,7 +30,8 @@ jobs:
       - name: Prepare static website
         run: |
           mkdir public
-          cp index.html favicon.svg public/
+          cp index.html favicon.svg login.html public/
+          cp -R online portal public/
           cp -R online public/ 
 
       - name: Upload website artifact
